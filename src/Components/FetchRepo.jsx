@@ -49,6 +49,7 @@ const FetchRepo = () => {
       setAvater(repoImage);
       // console.log(avater.data);
     });
+    console.log(import.meta.env);
   }, [currentPage, repoData, searchRepo]);
 
   const totalRepos = repoData.filter((repo) =>
