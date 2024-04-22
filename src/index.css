@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .border {
+        border: 2px solid #1371c7;
+        cursor: pointer;
+    }
+
+    .search-border {
+        border: 3px solid #1371c7;
+    }
+}
+
+@layer components {
+    .button-style {
+        @apply text-white px-6 py-1 hover:bg-[#1371c7] font-semibold hover:transition-opacity
+    }
+
+    .repoData{
+        @apply flex justify-between text-center xl:px-[14rem] text-white py-3 my-4 mx-10 cursor-pointer text-lg rounded-xl hover:-translate-y-2 hover:scale-100 max-sm:text-sm max-sm:px-10 sm:px-10
+    }
+}
