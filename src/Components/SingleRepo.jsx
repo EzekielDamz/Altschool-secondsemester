@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect} from "react";
+
 import { Link, useParams } from "react-router-dom";
 import { FiGithub } from "react-icons/fi";
 import { useRepoContext } from "../Context/RepoContext";
@@ -8,12 +8,10 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import Button from "./Button";
 const SingleRepo = () => {
   const { id } = useParams();
-  // const [RepoByName, setRepoByName] = useState([]);
   const { RepoByName, setRepoByName } = useRepoContext();
-  // const { repoData, setRepoData } = useRepoContext();
   const { Loading, setLoading } = useRepoContext();
 
-  // const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
+  const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,13 +21,12 @@ const SingleRepo = () => {
           {
             method: "GET",
             headers: {
-              // Authorization: `Bearer ${githubToken}`,
+              Authorization: `Bearer ${githubToken}`,
             },
           }
         );
         if (!response.ok) {
           console.log("error");
-
         }
         const data = await response.json();
         setRepoByName(data);

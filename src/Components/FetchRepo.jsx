@@ -15,11 +15,11 @@ const FetchRepo = () => {
   const [repoToDisplay, setRepoToDisplay] = useState([]);
   const [searchRepo, setSearchRepo] = useState("");
 // 
-  // const githubToken = import.meta.env.VITE_GITHUB_TOKEN
+  const githubToken = import.meta.env.VITE_GITHUB_TOKEN
   // Display some data when the page mounts
   useEffect(() => {
     const octokit = new Octokit({
-      // auth: githubToken,
+      auth: githubToken,
     });
     // Fetching all my data from my Github repository
     octokit
