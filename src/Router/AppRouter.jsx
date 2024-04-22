@@ -4,7 +4,7 @@ import MainPage from "../Pages/MainPage";
 import ErrorHandle from "../Components/ErrorHandle";
 import SingleRepo from "../Components/SingleRepo";
 import Error from "../Components/Error";
-// import ListData from "../Pages/ListData";
+
 const AppRouter = () => {
   return (
     <Router>

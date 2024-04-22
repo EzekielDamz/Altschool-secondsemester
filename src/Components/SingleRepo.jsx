@@ -13,7 +13,7 @@ const SingleRepo = () => {
   // const { repoData, setRepoData } = useRepoContext();
   const { Loading, setLoading } = useRepoContext();
 
-  const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
+  // const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +23,7 @@ const SingleRepo = () => {
           {
             method: "GET",
             headers: {
-              Authorization: `Bearer ${githubToken}`,
+              // Authorization: `Bearer ${githubToken}`,
             },
           }
         );

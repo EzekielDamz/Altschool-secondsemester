@@ -7,13 +7,13 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import { Octokit } from "@octokit/rest";
  
 const MainPage = () => {
-   const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
+  //  const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
   const { Loading, setLoading } = useRepoContext();
   const { setRepoData } = useRepoContext();
 
   useEffect(() => {
     const octokit = new Octokit({
-      auth: githubToken,
+      // auth: githubToken,
     });
     octokit
       .request("GET /user/repos")
