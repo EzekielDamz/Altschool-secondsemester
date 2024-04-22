@@ -13,7 +13,7 @@ const MainPage = () => {
 
   useEffect(() => {
     const octokit = new Octokit({
-      // auth: githubToken,
+      auth: githubToken,
     });
     octokit
       .request("GET /user/repos")
