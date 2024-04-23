@@ -44,7 +44,7 @@ const SingleRepo = () => {
   }, [RepoByName]);
   return (
     <section className="bg-[#0f0f1a] pt-10 pb-[2rem] ">
-      <div className="h-[100svh]">
+      <div className="">
         <h1 className="text-center text-[#1371c7] text-4xl font-bold max-sm:text-2xl">
           {RepoByName.name}
         </h1>
