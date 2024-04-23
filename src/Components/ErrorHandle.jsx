@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ErrorHandle = () => {
   return (
     <main className="bg-[#0f0f1a]">
-      <div className="text-center h-[100svh] pt-[29rem]">
+      <div className="text-center h-[100svh] pt-[10rem]">
         <div className="flex justify-center">
           <IoAlertCircle color="red" fontSize={150} />
         </div>
