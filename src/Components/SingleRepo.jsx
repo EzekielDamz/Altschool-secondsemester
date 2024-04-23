@@ -43,60 +43,61 @@ const SingleRepo = () => {
     console.log(RepoByName);
   }, [RepoByName]);
   return (
-    <section className="bg-[#0f0f1a] pt-10 pb-[2rem] h-[100svh]">
-      <div className="pt-10">
+    <section className="bg-[#0f0f1a] pt-10 pb-[2rem] ">
+      <div className="h-[100svh]">
         <h1 className="text-center text-[#1371c7] text-4xl font-bold max-sm:text-2xl">
           {RepoByName.name}
         </h1>
-      </div>
-      <div className="text-center pt-10">
-        <div className="repoData border">
-          <h2>ID</h2>
-          <h2>{RepoByName.id}</h2>
-        </div>
-        <div className="repoData border">
-          <h2>Branch: </h2>
-          <p>{RepoByName.default_branch}</p>
-        </div>
-        <div className="repoData border">
-          <h2>Created_at</h2>
-          <h2>{RepoByName.created_at}</h2>
-        </div>
-        <div className="repoData border">
-          <h2>forks</h2>
-          <h2>{RepoByName.forks}</h2>
-        </div>
-        <div className="repoData border">
-          <h2>Updated_at</h2>
-          <h2>{RepoByName.updated_at}</h2>
-        </div>
-        <div className="repoData border">
-          <h2>Pushed_at</h2>
-          <h2>{RepoByName.pushed_at}</h2>
-        </div>
-        <div className="repoData border">
-          <h2>Language</h2>
-          <h2>{RepoByName.language}</h2>
-        </div>
-        <div className="repoData border">
-          <h2>Visibility</h2>
-          <h2>{RepoByName.visibility}</h2>
-        </div>
-        <div className="repoData border">
-          <h2>File Size </h2>
-          <h2>{RepoByName.size}</h2>
-        </div>
-        <div className="flex justify-between mx-[8rem] max-sm:mx-[5rem] pt-5">
-          <Link to={RepoByName.clone_url}>
-            <div className="flex gap-2">
-              <p className="text-white">Github </p>
-              <FiGithub className="text-white text-2xl" />
-            </div>
-          </Link>
-          <div>
-            <Link to="/">
-              <Button text="Back" />
+
+        <div className="text-center pt-10">
+          <div className="repoData border">
+            <h2>ID</h2>
+            <h2>{RepoByName.id}</h2>
+          </div>
+          <div className="repoData border">
+            <h2>Branch: </h2>
+            <p>{RepoByName.default_branch}</p>
+          </div>
+          <div className="repoData border">
+            <h2>Created_at</h2>
+            <h2>{RepoByName.created_at}</h2>
+          </div>
+          <div className="repoData border">
+            <h2>forks</h2>
+            <h2>{RepoByName.forks}</h2>
+          </div>
+          <div className="repoData border">
+            <h2>Updated_at</h2>
+            <h2>{RepoByName.updated_at}</h2>
+          </div>
+          <div className="repoData border">
+            <h2>Pushed_at</h2>
+            <h2>{RepoByName.pushed_at}</h2>
+          </div>
+          <div className="repoData border">
+            <h2>Language</h2>
+            <h2>{RepoByName.language}</h2>
+          </div>
+          <div className="repoData border">
+            <h2>Visibility</h2>
+            <h2>{RepoByName.visibility}</h2>
+          </div>
+          <div className="repoData border">
+            <h2>File Size </h2>
+            <h2>{RepoByName.size}</h2>
+          </div>
+          <div className="flex justify-between mx-[8rem] max-sm:mx-[5rem] pt-5">
+            <Link to={RepoByName.clone_url}>
+              <div className="flex gap-2">
+                <p className="text-white">Github </p>
+                <FiGithub className="text-white text-2xl" />
+              </div>
             </Link>
+            <div>
+              <Link to="/">
+                <Button text="Back" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
