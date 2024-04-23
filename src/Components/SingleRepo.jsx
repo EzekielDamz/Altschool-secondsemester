@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 
 import { Link, useParams } from "react-router-dom";
 import { FiGithub } from "react-icons/fi";
@@ -39,27 +39,13 @@ const SingleRepo = () => {
     fetchData();
   }, [id]);
 
-  // useEffect(() => {
-  //   const FetchRepoData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `https://api.github.com/repositories/${name}`
-  //       );
-  //       console.log(response.data);
-  //       setRepoByName(response.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //       // setLoading(false);
-  //     }
-  //   };
-  //   FetchRepoData();
-  // }, []);
-
   useEffect(() => {
     console.log(RepoByName);
   }, [RepoByName]);
   return (
     <section className="bg-[#0f0f1a] pt-10 pb-[2rem]">
+
+  
       <div>
         <h1 className="text-center text-[#1371c7] text-4xl font-bold max-sm:text-2xl">
           {RepoByName.name}
