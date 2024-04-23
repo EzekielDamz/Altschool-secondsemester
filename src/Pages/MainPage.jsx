@@ -30,7 +30,7 @@ const MainPage = () => {
   return (
     <div className=" bg-[#0f0f1a] ">
       {Loading ? (
-        <div className="text-center h-[100svh] py-[35rem]">
+        <div className="text-center h-[100svh] pt-[20rem]">
           <ScaleLoader color="#36d7b7" text-2xl />
         </div>
       ) : (
